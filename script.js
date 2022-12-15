@@ -31,17 +31,28 @@ function promptGrid(e){
         div.remove();
     })
     createGrid(x);
-    enableChangingColors();
+    enableChangingColors('black');
 }
 
 //below is the code that changes colors
-enableChangingColors();
+enableChangingColors('black');
 
-function enableChangingColors(){
+function enableChangingColors(string){
     const divs = document.querySelectorAll('.grid');
-    divs.forEach(div => div.addEventListener('mouseenter',changeColor));
-    console.log(divs);
+    if(string === 'black'){    
+        divs.forEach(div => div.addEventListener('mouseenter',changeColorBlack));
+    }
+    else{
+        divs.forEach(div => div.addEventListener('mouseenter',changeColor));
+    }
 }
 function changeColor(e){
     this.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
 }
+function changeColorBlack(e){
+    this.style.backgroundColor = "#000000";
+}
+
+//code for magic colors button
+const mgBtn = document.querySelector('.magic');
+mgBtn.addEventListener('click',enableChangingColors);
