@@ -9,6 +9,7 @@ body{
     width: 500px;
     height: 500px;
     flex-wrap: wrap;
+    border: 2px solid beige;
 }
 
 .grid{
@@ -17,4 +18,11 @@ body{
 
 .ui{
     display: flex;
+    gap: 10px;
+}
+
+.btn{
+    height: fit-content;
+    border-radius: 7px;
+    padding: 2px 5px;
 }
