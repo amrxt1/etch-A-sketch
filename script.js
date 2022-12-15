@@ -1,16 +1,21 @@
-
-
+//code that creates and appends divs(grids) to the container
 const container = document.querySelector('.container');
+let x = 0;
 
-for(let i = 0; i<=255; i++){
-    const div = document.createElement('div');
-    div.style.margin = 0;
-    div.style.padding = 0;
-    //div.style.border = '0.5px solid black';
-    div.classList.add('grid');
-    container.appendChild(div);
+function createGrid(x){
+
+    const sideLength = 500.0/x;
+    const numberOfGrids = x*x;
+    for(let i = 1; i<=numberOfGrids; i++){
+        const div = document.createElement('div');
+        div.style.width = `${sideLength}px`;
+        div.style.height = `${sideLength}px`;
+        div.classList.add('grid');
+        container.appendChild(div);
+    }
 }
-
+createGrid(16);
+//below is the code that changes colors
 const divs = document.querySelectorAll('.grid');
 divs.forEach(div => div.addEventListener('mouseenter',changeColor));
 console.log(divs);
