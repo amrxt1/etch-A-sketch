@@ -21,7 +21,7 @@ const btn = document.querySelector('.btn');
 btn.addEventListener('click',promptGrid);
 
 function promptGrid(e){
-    let x = prompt('Enter the grid length you want.');
+    x = prompt('Enter the grid length you want.');
     if(x>100){
         alert("This number cannot be larger than 100.");
         return;

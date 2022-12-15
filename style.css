@@ -16,13 +16,22 @@ body{
     background-color: beige;
 }
 
-.ui{
+.content{
     display: flex;
     gap: 10px;
 }
 
-.btn{
+.btncss{
     height: fit-content;
     border-radius: 7px;
     padding: 2px 5px;
+    background-color: rgb(1, 1, 27);
+    color: rgb(140, 140, 225);
+}
+
+.ui{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
 }
