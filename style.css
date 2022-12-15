@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(140, 140, 225);
+    height: 100vh;
+}
+
+
+.container{
+    display: flex;
+    width: 160px;
+    flex-wrap: wrap;
+}
+
+.grid{
+    height: 10px;
+    width: 10px;
+    background-color: beige;
+}
